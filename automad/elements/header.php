@@ -1,6 +1,6 @@
 <@~ header-image.php @>
 <!DOCTYPE html>
-<html class="no-js" lang="de" style="color-scheme: light">
+<html class="no-js" lang="de">
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -21,30 +21,8 @@
 
         <!-- Title -->
         <title>@{ sitename } // @{ title }</title>
-     
-        <!-- CSS -->
-
-        <@ if @{ checkboxCloudCSS } @>
-
-            <!-- UIkit CSS -->
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/css/uikit.min.css" />
-
-            <!-- UIkit JS -->
-            <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/js/uikit.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.2/dist/js/uikit-icons.min.js"></script>
-
-        <@ else @>
-        <!-- UIkit CSS -->
-            <link rel="stylesheet" href="/packages/@{ theme }/css/uikit.min.css" />
-
-            <!-- UIkit JS -->
-            <script src="/packages/@{ theme }/js/uikit.min.js"></script>
-            <script src="/packages/@{ theme }/js/uikit-icons.min.js"></script>
-        <@ end @>
-
-
         <!-- Keepreading CSS -->
-        <link rel="stylesheet" href="/packages/@{ theme }/css/style.css">
+        <link rel="stylesheet" href="/packages/@{ theme }/css/tailwind.css">
         <!---->
 
         <script src="/automad/dist/blocks/main.bundle.js"></script>

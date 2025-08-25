@@ -39,6 +39,7 @@
                 </div>         
             </div>
         </footer>
+        <script src="/packages/@{ theme }/js/navigation.css"></script>
         @{ itemsTrackingCode }
     </body>
 </html>
