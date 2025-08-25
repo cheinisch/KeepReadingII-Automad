@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="de" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Tailwind (CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Deine (optionale) gebaute Tailwind/CSS -->
+    <link rel="stylesheet" href="css/tailwind.css" />
+    <title>Blog – Blogname</title>
+    <meta name="description" content="Blogliste von Blogname – neueste Beiträge im Überblick." />
+  </head>
+
+  <body class="bg-white dark:bg-zinc-950">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/80 dark:bg-zinc-950/80 backdrop-blur border-b border-zinc-200 dark:border-zinc-800">
+      <div class="mx-auto max-w-5xl px-4">
+        <div class="flex items-center justify-between h-16">
+          <!-- Logo / Brand -->
+          <a href="index.html" class="text-xl font-semibold text-zinc-900 dark:text-zinc-100">Blogname</a>
+
+          <!-- Desktop-Nav -->
+          <nav class="hidden md:block">
+            <ul class="flex items-center gap-6 text-zinc-600 dark:text-zinc-300">
+              <li><a href="index.html" class="hover:text-zinc-900 dark:hover:text-white">Home</a></li>
+              <li><a href="blog.html" class="hover:text-zinc-900 dark:hover:text-white">Blog</a></li>
+              <li><a href="post.html" class="hover:text-zinc-900 dark:hover:text-white">Post</a></li>
+              <li><a href="page.html" class="hover:text-zinc-900 dark:hover:text-white">Page</a></li>
+            </ul>
+          </nav>
+
+          <!-- Mobile Menu Button -->
+          <button id="mobileMenuBtn"
+                  class="md:hidden p-2 rounded hover:bg-zinc-100 dark:hover:bg-zinc-800"
+                  aria-label="Menü öffnen"
+                  aria-expanded="false"
+                  aria-controls="mobileMenu">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-zinc-700 dark:text-zinc-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile-Nav (Dropdown) -->
+      <div id="mobileMenu"
+           class="md:hidden hidden border-t border-zinc-200 dark:border-zinc-800 bg-white/95 dark:bg-zinc-950/95 backdrop-blur"
+           role="dialog" aria-modal="true">
+        <div class="mx-auto max-w-5xl px-4 py-3">
+          <nav>
+            <ul class="flex flex-col gap-2 text-zinc-700 dark:text-zinc-200">
+              <li><a class="block rounded px-3 py-2 hover:bg-zinc-100 dark:hover:bg-zinc-800" href="index.html">Home</a></li>
+              <li><a class="block rounded px-3 py-2 hover:bg-zinc-100 dark:hover:bg-zinc-800" href="blog.html">Blog</a></li>
+              <li><a class="block rounded px-3 py-2 hover:bg-zinc-100 dark:hover:bg-zinc-800" href="post.html">Post</a></li>
+              <li><a class="block rounded px-3 py-2 hover:bg-zinc-100 dark:hover:bg-zinc-800" href="page.html">Page</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main class="text-zinc-600 dark:text-zinc-300">
+      <section id="bloglist" class="mx-auto max-w-3xl px-1 py-10">
+        <header class="mb-6">
+          <h1 class="text-3xl font-semibold text-zinc-900 dark:text-zinc-100">Blog</h1>
+          <p class="text-sm text-zinc-500 dark:text-zinc-400">Neueste Beiträge</p>
+        </header>
+        <div id="content">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.  </p>
+        </div>
+        <!-- Grid: 1 / 2 / 3 Spalten -->
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Item 1 -->
+          <li>
+            <a href="post.html"
+               class="group block relative aspect-[16/9] overflow-hidden md:rounded-sm border border-zinc-200/70 dark:border-zinc-700/70 border-[0.5px] focus:outline-none focus:ring-2 focus:ring-blue-500"
+               aria-label="Sonnenaufgang am Strand – 22.08.2025">
+              <!-- BG -->
+              <div class="absolute inset-0 bg-zinc-100 dark:bg-zinc-900 bg-center bg-cover transition-transform duration-300 group-hover:scale-105"
+                   style="background-image:url('img/beach.webp')"></div>
+              <!-- Gradient -->
+              <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"></div>
+              <!-- Content unten links -->
+              <div class="absolute bottom-0 left-0 p-4">
+                <time datetime="2025-08-22" class="block text-xs text-zinc-300">22.08.2025</time>
+                <h2 class="mt-0.5 text-lg font-semibold text-white line-clamp-2">Sonnenaufgang am Strand</h2>
+              </div>
+            </a>
+          </li>
+
+          <!-- Item 2 -->
+          <li>
+            <a href="post.html"
+               class="group block relative aspect-[16/9] overflow-hidden md:rounded-sm border border-zinc-200/70 dark:border-zinc-700/70 border-[0.5px] focus:outline-none focus:ring-2 focus:ring-blue-500"
+               aria-label="Alpenpfade – 20.08.2025">
+              <div class="absolute inset-0 bg-zinc-100 dark:bg-zinc-900 bg-center bg-cover transition-transform duration-300 group-hover:scale-105"
+                   style="background-image:url('img/berge.jpg')"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"></div>
+              <div class="absolute bottom-0 left-0 p-4">
+                <time datetime="2025-08-20" class="block text-xs text-zinc-300">20.08.2025</time>
+                <h2 class="mt-0.5 text-lg font-semibold text-white line-clamp-2">Alpenpfade</h2>
+              </div>
+            </a>
+          </li>
+
+          <!-- Item 3 -->
+          <li>
+            <a href="post.html"
+               class="group block relative aspect-[16/9] overflow-hidden md:rounded-sm border border-zinc-200/70 dark:border-zinc-700/70 border-[0.5px] focus:outline-none focus:ring-2 focus:ring-blue-500"
+               aria-label="City Lights – 18.08.2025">
+              <div class="absolute inset-0 bg-zinc-100 dark:bg-zinc-900 bg-center bg-cover transition-transform duration-300 group-hover:scale-105"
+                   style="background-image:url('img/city.jpg')"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"></div>
+              <div class="absolute bottom-0 left-0 p-4">
+                <time datetime="2025-08-18" class="block text-xs text-zinc-300">18.08.2025</time>
+                <h2 class="mt-0.5 text-lg font-semibold text-white line-clamp-2">City Lights</h2>
+              </div>
+            </a>
+          </li>
+
+          <!-- Item 4 -->
+          <li>
+            <a href="post.html"
+               class="group block relative aspect-[16/9] overflow-hidden md:rounded-sm border border-zinc-200/70 dark:border-zinc-700/70 border-[0.5px] focus:outline-none focus:ring-2 focus:ring-blue-500"
+               aria-label="Waldpfade – 15.08.2025">
+              <div class="absolute inset-0 bg-zinc-100 dark:bg-zinc-900 bg-center bg-cover transition-transform duration-300 group-hover:scale-105"
+                   style="background-image:url('img/forest.jpg')"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"></div>
+              <div class="absolute bottom-0 left-0 p-4">
+                <time datetime="2025-08-15" class="block text-xs text-zinc-300">15.08.2025</time>
+                <h2 class="mt-0.5 text-lg font-semibold text-white line-clamp-2">Waldpfade</h2>
+              </div>
+            </a>
+          </li>
+
+          <!-- Item 5 -->
+          <li>
+            <a href="post.html"
+               class="group block relative aspect-[16/9] overflow-hidden md:rounded-sm border border-zinc-200/70 dark:border-zinc-700/70 border-[0.5px] focus:outline-none focus:ring-2 focus:ring-blue-500"
+               aria-label="Am See – 12.08.2025">
+              <div class="absolute inset-0 bg-zinc-100 dark:bg-zinc-900 bg-center bg-cover transition-transform duration-300 group-hover:scale-105"
+                   style="background-image:url('img/lake.jpg')"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"></div>
+              <div class="absolute bottom-0 left-0 p-4">
+                <time datetime="2025-08-12" class="block text-xs text-zinc-300">12.08.2025</time>
+                <h2 class="mt-0.5 text-lg font-semibold text-white line-clamp-2">Am See</h2>
+              </div>
+            </a>
+          </li>
+
+          <!-- Item 6 -->
+          <li>
+            <a href="post-6.html"
+               class="group block relative aspect-[16/9] overflow-hidden md:rounded-sm border border-zinc-200/70 dark:border-zinc-700/70 border-[0.5px] focus:outline-none focus:ring-2 focus:ring-blue-500"
+               aria-label="Wüste bei Nacht – 10.08.2025">
+              <div class="absolute inset-0 bg-zinc-100 dark:bg-zinc-900 bg-center bg-cover transition-transform duration-300 group-hover:scale-105"
+                   style="background-image:url('img/desert.jpg')"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"></div>
+              <div class="absolute bottom-0 left-0 p-4">
+                <time datetime="2025-08-10" class="block text-xs text-zinc-300">10.08.2025</time>
+                <h2 class="mt-0.5 text-lg font-semibold text-white line-clamp-2">Wüste bei Nacht</h2>
+              </div>
+            </a>
+          </li>
+        </ul>
+
+        <!-- Pagination -->
+        <nav class="mt-10 flex items-center justify-between">
+          <a href="#" class="px-4 py-2 md:rounded-sm border border-zinc-200/70 dark:border-zinc-700/70 hover:bg-zinc-50 dark:hover:bg-zinc-800">← Neuere</a>
+          <a href="#" class="px-4 py-2 md:rounded-sm border border-zinc-200/70 dark:border-zinc-700/70 hover:bg-zinc-50 dark:hover:bg-zinc-800">Ältere →</a>
+        </nav>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="dark:bg-neutral-950 text-zinc-500 text-gray-800 dark:text-gray-300 w-full pb-2 border-t border-neutral-500 px-2">
+      <div class="mx-auto max-w-3xl py-5 flex flex-col md:flex-row justify-between md:items-start items-center">
+        <div class="w-full md:max-w-sm mb-4 md:mb-0">
+          <h2>Über diesen Blog</h2>
+          <p>Kurzer Beschreibungstext für deinen Blog. Passe ihn inhaltlich an.</p>
+        </div>
+        <div>
+          <nav class="w-full md:w-auto">
+            <ul class="flex flex-wrap justify-center md:justify-start gap-4">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="post.html">Post</a></li>
+              <li><a href="page.html">Page</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="mx-auto max-w-3xl border-t border-neutral-500 py-5">
+        &copy; 2025 Blogname - Published with “CMS NAME”
+      </div>
+    </footer>
+    <script src="js/navigation.js"></script>
+  </body>
+</html>
