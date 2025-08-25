@@ -1,0 +1,30 @@
+{
+    "name": "Keep Reading II",
+    "description": "A light and elegant multi-purpose theme",
+    "author": "Christian Heinisch",
+    "version": "1.0.0",
+    "license": "MIT",
+    "masks": {
+        "page": [
+            "formatDatePost",
+            "formatDateProject",
+            "checkboxCloudCSS"
+        ],
+        "post": [
+            "checkboxCloudCSS",
+            "checkboxShowBloglist"
+        ],
+        "shared": [
+            "+main",
+            "subheadline",
+            "author",
+            "checkboxDark"
+        ]
+    },
+    "tooltips": {
+        "+main":"The normal Editor for Blocks",
+        "subheadline":"A Subheadline for a Blogpost or Page",
+        "author":"The Name of the Author",
+    }
+}
+
