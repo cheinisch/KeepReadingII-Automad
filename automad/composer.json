@@ -1,5 +1,5 @@
 {
-    "name": "heimfisch/keep_reading_ii",
+    "name": "heimfisch/keepreading_ii",
     "description": "A minimal and responsive blog theme for the Automad CMS based on the beautiful uikit framework, including a light color scheme. Check out the demo page and all available templates https://dev.heinisch-design.de/demo/keepreading.",
     "type": "automad-package",
     "keywords": ["theme"],
