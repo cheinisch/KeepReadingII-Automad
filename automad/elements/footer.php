@@ -1,45 +1,25 @@
-        <footer>
-            <div uk-grid>
-                <div class="uk-width-1-3@m footeritems">
-                    <b>@{ sitename }</b>
-                    <p>
-                        &copy; 2024 This site is made with <span uk-icon="heart"></span> and <span uk-icon="code"></span> Automad
-                    </p>
-                    <!--<ul>
-                        <li><span uk-icon="github"></span></li>
-                        <li><span uk-icon="mastodon"></span></li>
-                        <li><span uk-icon="instagram"></span></li>
-			            <li><span uk-icon="threads"></span></li>
-                        <li><span uk-icon="xing"></span></li>
-                    </ul>-->
+        <footer class="bg-neutral-200 dark:bg-neutral-950 text-zinc-500 text-gray-800 dark:text-gray-300 w-full pb-2 border-t border-neutral-500 px-2">
+            <div class="mx-auto max-w-3xl py-5 flex flex-col md:flex-row justify-between md:items-start items-center">
+                <div class="w-full md:max-w-sm mb-4 md:mb-0">
+                    <h2>@{ itemFooterHeadline }</h2>
+                    <p>@{ itemFooterText }</p>
                 </div>
-                <div class="uk-width-1-3@m footeritems">
+                <div>
+                    <nav class="w-full md:w-auto">
+                        <ul class="flex flex-wrap justify-center md:justify-start gap-4">
+                            <li><a href="index.html">Home</a></li>
+                            <li> <a href="blog.html">Blog</a></li>
+                            <li><a href="post.html">Post</a></li>
+                            <li><a href="page.html">Page</a></li>
+                        </ul>
+                    </nav>
                 </div>
-                <div class="uk-width-1-6@m footeritems">
-                    <!-- Bottom NAV 2-->
-                    <ul class="uk-nav uk-nav-default">
-                        <@ newPagelist { type: false, excludeHidden: false } @>
-                        <@ foreach in pagelist @>
-                            <@ if @{ checkboxShowinBottomNav_2 } @>
-                                <li><a href="@{ url }">@{ title }</a></li>
-                            <@ end @>
-                        <@ end @>	
-                    </ul>
-                </div>
-                <div class="uk-width-1-6@m footeritems">
-                    <!-- Bottom NAV 1 -->
-                    <ul class="uk-nav uk-nav-default">
-                        <@ newPagelist { type: false, excludeHidden: false } @>
-                        <@ foreach in pagelist @>
-                            <@ if @{ checkboxShowinBottomNav_1 } @>
-                                <li><a href="@{ url }">@{ title }</a></li>
-                            <@ end @>
-                        <@ end @>	
-                    </ul>
-                </div>         
             </div>
+            <div class="mx-auto max-w-3xl border-t border-neutral-500 py-5">
+                &copy; 2025 @{ sitename } - Published with Automad
+            </div>            
         </footer>
-        <script src="/packages/@{ theme }/js/navigation.css"></script>
+        <script src="/packages/@{ theme }/js/navigation.js"></script>
         @{ itemsTrackingCode }
     </body>
 </html>

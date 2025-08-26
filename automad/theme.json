@@ -25,6 +25,8 @@
         "+main":"The normal Editor for Blocks",
         "subheadline":"A Subheadline for a Blogpost or Page",
         "author":"The Name of the Author",
+        "itemsFooterHeadline":"Additional Footertext Headline",
+        "itemsFooterText":"Additional Footertext"
     }
 }
 
