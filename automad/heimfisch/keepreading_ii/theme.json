@@ -26,7 +26,11 @@
         "subheadline":"A Subheadline for a Blogpost or Page",
         "author":"The Name of the Author",
         "itemsFooterHeadline":"Additional Footertext Headline",
-        "itemsFooterText":"Additional Footertext"
+        "itemsFooterText":"Additional Footertext",
+        "itemGithub":"Github Username",
+        "itemInstagram":"Instagram Username",
+        "itemTwitter":"X (Twitter) Username",
+        "itemYoutube":"Youtube Username"
     }
 }
 
