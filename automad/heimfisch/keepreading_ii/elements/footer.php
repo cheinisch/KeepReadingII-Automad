@@ -14,12 +14,14 @@
 
                 <!-- 1/4: Navigation -->
                 <section class="md:col-span-1">
-                <h3 class="text-sm font-semibold uppercase tracking-wide text-zinc-600 dark:text-zinc-400">Navigation</h3>
+                <h3 class="text-sm font-semibold uppercase tracking-wide text-zinc-600 dark:text-zinc-400">Some Links</h3>
                 <ul class="mt-3 flex flex-col gap-2">
-                    <li><a href="index.html" class="hover:text-zinc-900 dark:hover:text-zinc-100">Home</a></li>
-                    <li><a href="blog.html" class="hover:text-zinc-900 dark:hover:text-zinc-100">Blog</a></li>
-                    <li><a href="post.html" class="hover:text-zinc-900 dark:hover:text-zinc-100">Post</a></li>
-                    <li><a href="page.html" class="hover:text-zinc-900 dark:hover:text-zinc-100">Page</a></li>
+                    <@ newPagelist { type: false, excludeHidden: false } @>
+                    <@ foreach in pagelist @>
+                        <@ if @{ checkboxShowInFooter } @>
+                            <li><a href="@{ url }" class="hover:text-zinc-900 dark:hover:text-zinc-100">@{ title }</a></li>
+                        <@ end @>
+                    <@ end @>
                 </ul>
                 </section>                
 
