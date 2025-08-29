@@ -25,11 +25,11 @@
 
 <@ elements/header.php @>
 
-    <body class="bg-white dark:bg-zinc-950">
+    <body class="bg-neutral-200 dark:bg-neutral-950">
         
 		<@ elements/navigation.php @>
         
-        <main class="text-zinc-600 dark:text-zinc-300">
+        <main class="text-zinc-600 dark:text-zinc-300 bg-white dark:bg-zinc-950">
       		<section id="bloglist" class="mx-auto max-w-3xl px-1 py-10">
         		<header class="mb-6">
           			<h1 class="text-3xl font-semibold text-zinc-900 dark:text-zinc-100">@{ title }</h1>
@@ -49,10 +49,12 @@
 						<@ end @>
                     <@ end @>
                 </ul>
+				
 				<!-- Pagination -->
-				<nav class="flex items-center justify-between border-t border-gray-200 px-4 sm:px-0 dark:border-neutral-500 my-3">								
+				<@ set { :page: @{ ?page | def (1) } } @>
+				<@ if @{ :paginationCount } > 1 @>
+				<nav class="flex items-center justify-between border-t border-gray-200 px-4 sm:px-0 dark:border-neutral-500 my-3">
 				<div class="-mt-px flex w-0 flex-1">
-					<@ set { :page: @{ ?page | def (1) } } @>
 					<@ if @{ :page } > 1 @>	
 					<a href="?<@ queryStringMerge { page: @{ :page | -1 } } @>" class="inline-flex items-center border-t-2 border-transparent pt-4 pr-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700 dark:text-gray-400 dark:hover:border-white/20 dark:hover:text-gray-200">
 					<svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="mr-3 size-5 text-gray-400 dark:text-gray-500">
@@ -86,6 +88,7 @@
 					<@ end @>
 				</div>
 				</nav>
+				<@ end @>
             </content>
         </main>
 <@ elements/footer.php @>

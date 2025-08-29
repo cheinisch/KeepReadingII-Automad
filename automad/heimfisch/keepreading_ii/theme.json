@@ -7,12 +7,11 @@
     "masks": {
         "page": [
             "formatDatePost",
-            "formatDateProject",
-            "checkboxCloudCSS"
+            "formatDateProject"
         ],
         "post": [
-            "checkboxCloudCSS",
-            "checkboxShowBloglist"
+            "checkboxShowBloglist",
+            "imageHeader"
         ],
         "shared": [
             "+main",
@@ -30,7 +29,8 @@
         "itemGithub":"Github Username",
         "itemInstagram":"Instagram Username",
         "itemTwitter":"X (Twitter) Username",
-        "itemYoutube":"Youtube Username"
+        "itemYoutube":"Youtube Username",
+        "imageHeader":"Feature Image"
     }
 }
 

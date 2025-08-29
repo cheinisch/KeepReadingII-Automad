@@ -16,7 +16,7 @@
             ogTitle: @{ ogTitle | def('@{ sitename } / @{ title }') },
             ogDescription: @{ ogDescription | def(@{ text | stripTags }) },
             ogType: 'website',
-            ogImage: @{ ogImage | def(@{ :imageCard }) }
+            ogImage: @{ ogImage | def(@{ imageHeader }) }
         } @>
 
         <!-- Title -->
@@ -24,6 +24,11 @@
         <!-- Keepreading CSS -->
         <link rel="stylesheet" href="/packages/@{ theme }/css/tailwind.css">
         <!---->
+        <!-- Photoswipe CSS -->
+        <link rel="stylesheet" href="/packages/@{ theme }/css/photoswipe.css">
+
+        <!-- Automad -->
+        <link rel="stylesheet" href="/packages/@{ theme }/css/automad.css">
 
         <script src="/automad/dist/blocks/main.bundle.js"></script>
     </head>

@@ -7,22 +7,6 @@
       <@ foreach in pagelist @>
 
         <@ if @{ :i } = 1 @>
-          <# Reset variable to false in case there is no match. #>
-          <@ set { :imageCard: false } @>
-          <# Try to get image from variable. #>
-          <@ with @{ imageCard | def ('*.jpg, *.png, *.gif') } { width: 1280 } ~@>
-            <@ set { :imageCard: @{ :fileResized } } @>
-          <@~ else ~@>
-            <# Else try to get first image from content. #>
-            <@ set { :imageCard: 
-              @{ +main | 
-                def (@{ textTeaser | markdown }) | 
-                def (@{ text | markdown }) |
-                findFirstImage 
-              }
-            } @>
-          <@~ end @>
-
 
           <!-- Featured: mit Bild (nur Item #1) -->
           <a href="@{ url }"
@@ -30,9 +14,9 @@
              aria-label="@{ title }">
             
             <!-- Hintergrundbild: imageCard -> cover -> Platzhalter -->
-            <@ set { :_img = @{ imageCard | def(@{ cover | def('') }) } } @>
+            
             <div class="absolute inset-0 bg-zinc-100 dark:bg-zinc-900 bg-center bg-cover transition-transform duration-300 group-hover:scale-105"
-                 style="background-image:url('<@ if @{ :imageCard } @>@{ :imageCard }<@ else @>/assets/placeholder-16x9.jpg<@ end @>')"></div>
+                 style="background-image:url('<@ if @{ imageHeader } @>@{ imageHeader }<@ else @>/assets/placeholder-16x9.jpg<@ end @>')"></div>
 
             <!-- Gradient -->
             <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"></div>
