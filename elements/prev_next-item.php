@@ -1,4 +1,4 @@
-                    <div class="md:w-1/2">
+                    
                         <a href="@{ url }"
                             class="group block relative aspect-[16/9] overflow-hidden md:rounded-sm border border-zinc-200/70 dark:border-zinc-700/70 border-[0.5px] focus:outline-none focus:ring-2 focus:ring-blue-500"
                             aria-label="@{ title }">
@@ -12,5 +12,4 @@
                                 <time datetime="<@ date.php @>" class="block text-xs text-zinc-300"><@ date.php @></time>
                                 <h2 class="mt-0.5 text-lg font-semibold text-white line-clamp-2">@{ title }</h2>
                             </div>
-                            </a>
-                    </div>
+                        </a>

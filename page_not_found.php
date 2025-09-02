@@ -1,6 +1,6 @@
 <?php
 http_response_code(404);
-$langArray = require './packages/heimfisch/keepreading/lang/lang.en.php';
+$langArray = require './packages/heimfisch/keepreading_ii/lang/lang.en.php';
 ?>
 
 <@ elements/header.php @>
