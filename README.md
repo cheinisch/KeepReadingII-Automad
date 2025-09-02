@@ -7,11 +7,13 @@
 
 ## Content
 
+### Pages
 KeepReading is a simple theme with 3 pages.
 - Page
 - Post
 - Blog
 
+### Blocks
 IT also inclused a custom pagelist style with a treaser grid  
 
 
