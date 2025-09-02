@@ -14,7 +14,7 @@ KeepReading is a simple theme with 3 pages.
 - Blog
 
 ### Blocks
-IT also inclused a custom pagelist style with a treaser grid  
+IT also included a custom pagelist style with a treaser grid  
 
 
 ## License
