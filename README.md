@@ -10,3 +10,11 @@ KeepReading is a simple theme with 3 components.
 - Post
 - Blog
   
+
+
+## License
+MIT
+
+## Credits
+- Built for Automad
+- Icons/illustrations and third-party libraries are subject to their respective licenses.
