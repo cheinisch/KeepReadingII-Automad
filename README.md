@@ -5,11 +5,14 @@
 
 # KeepReading II
 
-KeepReading is a simple theme with 3 components.
+## Content
+
+KeepReading is a simple theme with 3 pages.
 - Page
 - Post
 - Blog
-  
+
+IT also inclused a custom pagelist style with a treaser grid  
 
 
 ## License
