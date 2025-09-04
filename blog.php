@@ -38,9 +38,14 @@ $langArray = require './packages/heimfisch/keepreading_ii/lang/lang.en.php';
       		<section id="bloglist" class="mx-auto max-w-3xl px-1 py-10">
         		<header class="mb-6">
           			<h1 class="text-3xl font-semibold text-zinc-900 dark:text-zinc-100">@{ title }</h1>
+					<@ if @{ ?filter } @>
+					<p class="text-lg text-zinc-500 dark:text-zinc-400">Filter: @{ ?filter } <a href="@{ url }" class="hover:text-red-600">&#x2715;</a></p>
+					<@ else @>
           			<p class="text-sm text-zinc-500 dark:text-zinc-400">Neueste Beiträge</p>
+					<@ end @>
         		</header>
 				<@ if @{ ?filter } @>
+				<!-- Dummy filter platz-->
 				<@ else @>
         		<div id="content">
             		@{ +main }
